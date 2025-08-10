@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const links = ["Home", "About", "Project", "Contact"];
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -13,6 +14,14 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   return (
     <div
@@ -29,6 +38,12 @@ const Navbar = () => {
           {item}
         </a>
       ))}
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="bg-red-500 text-white p-2 border rounded-md"
+      >
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./Component/Navbar/Navbar";
@@ -11,13 +11,11 @@ import VideoBackground from "./Component/Others/VideoBackground";
 
 const App = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    AOS.init({ duration: 1000, once: true });
   }, []);
+
   return (
-    <div className="">
+    <div>
       <VideoBackground />
       <Navbar />
       <HeroSection />
