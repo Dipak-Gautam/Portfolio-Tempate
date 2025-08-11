@@ -22,9 +22,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         scrolled ? "bg-[#007f739e] backdrop-blur-md shadow-md" : "bg-[#007f73]"
       }`}
     >
-      <div className="font-bold text-3xl text-white text-glow-white">
-        Dipak Gautam
-      </div>
+      <div className="font-bold text-3xl text-white ">Dipak Gautam</div>
       <div className="flex items-center gap-6">
         {links.map((item) => (
           <a
