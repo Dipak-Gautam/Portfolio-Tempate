@@ -10,14 +10,24 @@ import Footer from "./Component/Footer/Footer";
 import VideoBackground from "./Component/Others/VideoBackground";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div>
-      <VideoBackground />
-      <Navbar />
+    <div className="text-gray-800 dark:text-gray-100 transition-colors duration-[2000] ease-in">
+      <VideoBackground darkMode={darkMode} />
+      <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
       <HeroSection />
       <AboutSection />
       <Projects />

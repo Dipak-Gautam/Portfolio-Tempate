@@ -5,3 +5,13 @@ html {
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+.text-glow-white {
+  color: white;
+  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white;
+}
+
+.text-glow-gray {
+  color: #1f2937;
+  text-shadow: 0 0 1px #374151, 0 2px #4b5563, 0 0 3px #6b7280;
+}
