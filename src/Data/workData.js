@@ -1,7 +1,7 @@
 const workData = [
   {
     projectName: "",
-    projectImage: "",
+    image: "",
     projectDescription: "",
     tags: [],
     gitHubLink: "",
