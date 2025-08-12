@@ -1,5 +1,5 @@
 const personalData = {
-  name: "Dipak Gautam",
+  name: "My Name",
   image: "./my/HeroSection/profileCopy.jpg",
   designation: [
     "Full Stack Developer",
@@ -7,7 +7,7 @@ const personalData = {
     "Backend Developer",
   ],
   linkedIn: "",
-  faceBook: "https://www.facebook.com/boma.colo/",
+  faceBook: "https://www.facebook.com/boma.colo",
   github: "https://github.com/Dipak-Gautam",
   instagram: "",
   description:
