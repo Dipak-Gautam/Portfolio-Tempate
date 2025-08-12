@@ -8,6 +8,7 @@ import HeroSection from "./Component/HeroSection/HeroSection";
 import Contact from "./Component/Contact/Contact";
 import Footer from "./Component/Footer/Footer";
 import VideoBackground from "./Component/Others/VideoBackground";
+import MyServices from "./Component/MyServices/MyServices";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,6 +31,7 @@ const App = () => {
       <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
       <HeroSection />
       <AboutSection />
+      <MyServices />
       <Projects />
       <Contact />
       <Footer />

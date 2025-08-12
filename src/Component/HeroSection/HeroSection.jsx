@@ -8,15 +8,15 @@ import { AiFillInstagram } from "react-icons/ai";
 const HeroSection = () => {
   return (
     <div
-      className=" h-[80vh] text-2xl font-medium  dark:text-glow-white md:flex items-center p-5 md:px-20 gap-2"
+      className=" md:h-[80vh] text-2xl font-medium  dark:text-glow-white md:flex items-center p-8 px-8 md:px-16 lg:px-20 gap-10"
       id="Home"
     >
-      <div className="flex justify-center items-center h-full  md:w-[30%]">
+      <div className="flex justify-center items-center h-full  md:min-w-80">
         <div className=" shadow-6xl shadow-amber-600  rounded-full overflow-hidden border-4 border-[#046259] ">
           <img src="./my/profileCopy.jpg" className="h-80 w-80 my-auto  " />
         </div>
       </div>
-      <div className="md:w-[70%] ">
+      <div className="md:w-[70%] md:flex flex-col">
         <div className="text-2xl font-medium">Hello, Myself</div>
         <h2 className="text-5xl font-bold dark:text-glow-white">
           Dipak Gautam
