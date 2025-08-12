@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./Component/ProjectCard";
+import workData from "../../Data/workData";
 
 const Projects = () => {
   return (
@@ -11,8 +12,9 @@ const Projects = () => {
         </p>
       </div>
       <div className="mt-10 flex justify-center gap-10 flex-wrap">
-        <ProjectCard />
-        <ProjectCard />
+        {workData.map((item, index) => (
+          <ProjectCard key={item.projectName} data={item} index={index} />
+        ))}
       </div>
     </div>
   );

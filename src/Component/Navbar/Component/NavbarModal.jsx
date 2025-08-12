@@ -13,7 +13,9 @@ const NavbarModal = ({
   console.log("links", links);
   return (
     <div
-      className={`inset-0 fixed   justify-end ${showModal ? "flex" : "hidden"}`}
+      className={`inset-0 fixed z-10   justify-end ${
+        showModal ? "flex" : "hidden"
+      }`}
       onClick={() => setShowModal(false)}
     >
       <div

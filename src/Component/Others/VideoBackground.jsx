@@ -1,58 +1,45 @@
 import React, { useEffect, useState } from "react";
 
 const VideoBackground = ({ darkMode }) => {
-  const [showTransition, setShowTransition] = useState(false);
-  const [currentMode, setCurrentMode] = useState(darkMode);
-  const [transitionSrc, setTransitionSrc] = useState("");
+  const [videos, setVideos] = useState([
+    {
+      src: darkMode ? "/darkBg.mp4" : "/lightBg.mp4",
+      key: Date.now(),
+      opacity: 1,
+    },
+  ]);
 
   useEffect(() => {
-    if (darkMode !== currentMode) {
-      if (currentMode && !darkMode) {
-        setTransitionSrc("/darkToLight.mp4");
-      } else if (!currentMode && darkMode) {
-        setTransitionSrc("/lightToDark.mp4");
-      }
+    const newSrc = darkMode ? "/darkBg.mp4" : "/lightBg.mp4";
 
-      setShowTransition(true);
+    setVideos((prev) => [
+      { ...prev[0], opacity: 0 },
+      { src: newSrc, key: Date.now(), opacity: 1 },
+    ]);
 
-      const timer = setTimeout(() => {
-        setShowTransition(false);
-        setCurrentMode(darkMode);
-      }, 2000);
+    const cleanup = setTimeout(() => {
+      setVideos((prev) => prev.slice(1));
+    }, 1000);
 
-      return () => clearTimeout(timer);
-    }
-  }, [darkMode, currentMode]);
-
-  if (showTransition) {
-    return (
-      <video
-        key="transition"
-        className="fixed top-0 left-0 w-full h-full object-cover -z-10"
-        autoPlay
-        loop={false}
-        muted
-        playsInline
-      >
-        <source src={transitionSrc} type="video/mp4" />
-      </video>
-    );
-  }
+    return () => clearTimeout(cleanup);
+  }, [darkMode]);
 
   return (
-    <video
-      key={currentMode ? "dark" : "light"}
-      className="fixed top-0 left-0 w-full h-full object-cover -z-10"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source
-        src={currentMode ? "/darkBg.mp4" : "/lightBg.mp4"}
-        type="video/mp4"
-      />
-    </video>
+    <>
+      {videos.map((video) => (
+        <video
+          key={video.key}
+          className={`fixed top-0 left-0 w-full h-full object-cover -z-10 transition-opacity duration-500`}
+          style={{ opacity: video.opacity }}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={video.src} type="video/mp4" />
+        </video>
+      ))}
+    </>
   );
 };
 

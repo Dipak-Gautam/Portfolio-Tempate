@@ -1,10 +1,11 @@
 import React from "react";
 import { FaMapMarkedAlt, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import contactData from "../../Data/contactData";
 
 const Contact = () => {
   return (
-    <div className="md:px-20 p-5 md:p-16" id="Contact">
+    <div className="md:px-20 p-5 md:p-16" id="Contact" data-aos="flip-left">
       <div className="bg-[#badfe7] flex rounded-xl overflow-hidden gap-6 items-center">
         <div className="flex-1 p-16  flex flex-col">
           <div className="text-indigo-600 text-xl font-medium">
@@ -27,7 +28,7 @@ const Contact = () => {
                   Location
                 </div>
                 <div className="text-sm font-medium text-gray-700">
-                  AmmarDeep Pokhara,Nepal
+                  {contactData.location}{" "}
                 </div>
               </div>
             </div>
@@ -40,7 +41,7 @@ const Contact = () => {
                   Phone Number
                 </div>
                 <div className="text-sm font-medium text-gray-700">
-                  +977 98000000
+                  {contactData.phoneNumber}{" "}
                 </div>
               </div>
             </div>
@@ -51,7 +52,7 @@ const Contact = () => {
               <div>
                 <div className="text-lg font-medium text-gray-800">EMail </div>
                 <div className="text-sm font-medium text-gray-700">
-                  anjangautam095@gmail.com
+                  {contactData.email}
                 </div>
               </div>
             </div>
