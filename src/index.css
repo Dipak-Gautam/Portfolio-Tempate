@@ -12,6 +12,6 @@ html {
 }
 
 .text-glow-gray {
-  color: #1f2937;
-  text-shadow: 0 0 1px #374151, 0 2px #4b5563, 0 0 3px #6b7280;
+  color: #1f2937; /* dark gray text */
+  text-shadow: 0 0 2px #3e5376, /* light gray close glow */ 0 0 4px #d2c78d; /* brighter outer glow */
 }
