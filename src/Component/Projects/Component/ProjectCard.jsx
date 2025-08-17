@@ -7,14 +7,16 @@ const ProjectCard = ({ data, index }) => {
       data-aos="fade-up"
       data-aos-delay={`${index * 100}`}
       href={data.projectLink}
-      target="_black"
+      target="_blank"
       className="border border-gray-300 hover:shadow-2xl hover:shadow-[#056158] w-72 rounded-xl overflow-hidden "
     >
       <div className="relative">
         <img src={data.image} alt="" className="w-72 h-56" />
         <a
-          href={data.github}
+          href={data.gitHubLink}
+          target="_blank"
           className="absolute top-2 right-2 bg-gray-700 p-2 rounded-full text-white border border-gray-600 hover:border-white hover:shadow-xl hover:shadow-black/50"
+          onClick={(e) => e.stopPropagation()}
         >
           <FaGithub />
         </a>

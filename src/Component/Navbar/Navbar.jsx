@@ -4,6 +4,7 @@ import { RiSunFoggyFill } from "react-icons/ri";
 import NavbarModal from "./Component/NavbarModal";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import personalData from "../../Data/personalData";
 
 const links = ["Home", "About", "Project", "Contact"];
 
@@ -29,7 +30,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             : "bg-[#007f73]"
         }`}
       >
-        <div className="font-bold text-3xl text-white ">Dipak Gautam</div>
+        <div className="font-bold text-3xl text-white ">
+          {personalData.name}
+        </div>
 
         <div className=" hidden md:flex items-center gap-6">
           {links.map((item) => (
