@@ -5,8 +5,11 @@ import contactData from "../../Data/contactData";
 
 const Contact = () => {
   return (
-    <div className="md:px-20 p-5 md:p-16" id="Contact" data-aos="flip-left">
-      <div className="bg-[#badfe7] flex rounded-xl overflow-hidden gap-6 items-center">
+    <div className="md:px-20 p-5 md:p-16" id="Contact">
+      <div
+        className="bg-[#badfe7] flex rounded-xl overflow-hidden gap-6 items-center border border-[#badfe7] hover:border-[#007F73] hover:shadow-2xl shadow-[#007F73]"
+        data-aos="flip-left"
+      >
         <div className="flex-1 p-16  flex flex-col">
           <div className="text-indigo-600 text-xl font-medium">
             What can I do for you?
