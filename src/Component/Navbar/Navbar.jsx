@@ -24,7 +24,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <div
-        className={`sticky top-0 z-50 flex justify-between w-full gap-5 p-2 transition-all duration-300 items-center px-5 md:px-20 ${
+        className={`fixed top-0 z-50 flex justify-between w-full gap-5 p-2 transition-all duration-300 items-center px-5 md:px-20 ${
           scrolled
             ? "bg-[#007f739e] backdrop-blur-md shadow-md"
             : "bg-[#007f73]"
