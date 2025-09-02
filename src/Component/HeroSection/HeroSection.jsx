@@ -13,7 +13,7 @@ const HeroSection = () => {
       id="Home"
     >
       <div className="flex justify-center items-center h-full  md:min-w-80">
-        <div className=" shadow-2xl shadow-[#046259]   rounded-full overflow-hidden border-4 border-[#046259] ">
+        <div className=" shadow-2xl shadow-[#046259]   rounded-full overflow-hidden border-4 border-[#046259] hover:border-[#089082] cursor-pointer  ">
           <img src={personalData.image} className="h-80 w-80 my-auto  " />
         </div>
       </div>
