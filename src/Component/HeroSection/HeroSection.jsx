@@ -9,11 +9,11 @@ import personalData from "../../Data/personalData";
 const HeroSection = () => {
   return (
     <div
-      className=" md:h-[80vh] text-2xl font-medium  dark:text-glow-white md:flex items-center p-8 px-8 md:px-16 lg:px-20 gap-10"
+      className=" md:h-[80vh] text-2xl font-medium  dark:text-glow-white md:flex items-center p-8 px-8 md:px-16 lg:px-20 gap-10 cursor-default"
       id="Home"
     >
       <div className="flex justify-center items-center h-full  md:min-w-80">
-        <div className=" shadow-2xl shadow-[#046259]   rounded-full overflow-hidden border-4 border-[#046259] hover:border-[#089082] cursor-pointer  ">
+        <div className=" shadow-2xl shadow-[#046259]   rounded-full overflow-hidden border-4 border-[#046259] hover:border-[#0cc6b3] cursor-pointer  transition-colors duration-700 ease-in-out  hover:shadow-[#03887b]">
           <img src={personalData.image} className="h-80 w-80 my-auto  " />
         </div>
       </div>
