@@ -60,7 +60,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#007F73] p-2 text-sm px-4 rounded-md w-fit text-white font-semibold mt-5 hover:shadow-md shadow-[#007F73] cursor-pointer">
+          <div className="bg-[#007F73] p-2 text-sm px-4 rounded-md w-fit text-white font-semibold mt-5 hover:shadow-lg shadow-[#03a595] cursor-pointer hover:bg-[#1bc2b1] transition-all duration-500 ease-in-out">
             Let's talk
           </div>
         </div>
